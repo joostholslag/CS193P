@@ -34,7 +34,7 @@ class CalculatorBrain {
     }
     
     init(){
-        knownOps["×"] = Op.BinaryOperation("×", +)
+        knownOps["×"] = Op.BinaryOperation("×", *)
         knownOps["+"] = Op.BinaryOperation("+", +)
         knownOps["÷"] = Op.BinaryOperation("÷") {$1 / $0}
         knownOps["-"] = Op.BinaryOperation("-") {$1 - $0}
